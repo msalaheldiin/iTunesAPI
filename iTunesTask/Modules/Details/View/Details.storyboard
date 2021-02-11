@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DetailsVC-->
+        <scene sceneID="9mi-gK-3yZ">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" id="66K-1I-smC" customClass="DetailsVC" customModule="iTunesTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWJ-kN-uZv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-Sv-Tos">
+                                <rect key="frame" x="0.0" y="107" width="414" height="755"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="lZl-5S-Bs4">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3ss-ko-WJC">
+                                <rect key="frame" x="20" y="60" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Grid Layout"/>
+                                    <segment title="List Layout"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControllerWasPressed:" destination="66K-1I-smC" eventType="valueChanged" id="zgr-9a-BSt"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ss-ko-WJC" firstAttribute="leading" secondItem="OC8-cb-zna" secondAttribute="leading" constant="20" id="2oK-zv-VBb"/>
+                            <constraint firstItem="OC8-cb-zna" firstAttribute="trailing" secondItem="cgV-Sv-Tos" secondAttribute="trailing" id="82a-vc-62M"/>
+                            <constraint firstItem="cgV-Sv-Tos" firstAttribute="top" secondItem="3ss-ko-WJC" secondAttribute="bottom" constant="16" id="AeO-6U-LOI"/>
+                            <constraint firstItem="OC8-cb-zna" firstAttribute="trailing" secondItem="3ss-ko-WJC" secondAttribute="trailing" constant="20" id="BBW-vL-QVh"/>
+                            <constraint firstItem="3ss-ko-WJC" firstAttribute="top" secondItem="OC8-cb-zna" secondAttribute="top" constant="16" id="Hy1-sE-W1S"/>
+                            <constraint firstItem="lZl-5S-Bs4" firstAttribute="centerX" secondItem="aWJ-kN-uZv" secondAttribute="centerX" id="K61-5G-GYG"/>
+                            <constraint firstItem="cgV-Sv-Tos" firstAttribute="leading" secondItem="OC8-cb-zna" secondAttribute="leading" id="PFe-kO-JcI"/>
+                            <constraint firstItem="lZl-5S-Bs4" firstAttribute="centerY" secondItem="aWJ-kN-uZv" secondAttribute="centerY" id="PXp-ri-ruu"/>
+                            <constraint firstItem="OC8-cb-zna" firstAttribute="bottom" secondItem="cgV-Sv-Tos" secondAttribute="bottom" id="r08-yt-CVW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OC8-cb-zna"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lZl-5S-Bs4" id="Xg5-iP-gTG"/>
+                        <outlet property="segmentControl" destination="3ss-ko-WJC" id="NeT-m4-JfV"/>
+                        <outlet property="tableView" destination="cgV-Sv-Tos" id="NX2-DN-Ipu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MP7-jW-K7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
